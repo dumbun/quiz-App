@@ -5,4 +5,10 @@ class QuizQuestion {
     required this.text,
     required this.answers,
   });
+
+  List<String> getShafuledAnswers() {
+    final shuffledList = List.of(answers);
+    shuffledList.shuffle();
+    return shuffledList;
+  }
 }
